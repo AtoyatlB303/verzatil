@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podcast - La Sociedad del Cansancio</title>
+<style>
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 40px;
+  color: #333;
+  margin:0;
+}
+
+/* === TARJETA DEL PODCAST === */
+.podcast-card {
+  display: flex;
+  align-items: center;
+  background-color: #400309;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.podcast-image {
+  flex: 0 0 90px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.podcast-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.podcast-info {
+  flex: 1;
+}
+
+.podcast-info h2 {
+  font-size: 0.95rem;
+  color: #b8b4c8;
+  margin: 0;
+}
+
+.podcast-info h1 {
+  font-size: 1.2rem;
+  margin: 4px 0 12px;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* === REPRODUCTOR === */
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.play-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  color: #2b2535;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #4a4458;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #ff0000;
+  border-radius: 4px;
+  transition: width 0.2s linear;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: #ccc;
+  min-width: 80px;
+  text-align: right;
+}
+
+.volume-container {
+  position: relative;
+}
+
+.volume-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#volumeControl {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: -20px;
+  transform: rotate(-90deg);
+  width: 100px;
+}
+
+.volume-container:hover #volumeControl,
+#volumeControl:hover {
+  display: block;
+}
+
+/* === PIE DE IMAGEN === */
+.podcast-footer {
+  max-width: 800px;      /* Igual que .podcast-card */
+  margin: 0 auto 30px auto; /* Centrado con mismo margen */
+  background-color: #ffffff;
+  padding: 14px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px 20px;
+  font-size: 0.85rem;
+  color: #504f53;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-left span, .footer-right span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.podcast-footer a {
+  color: #9ac8ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.podcast-footer a:hover {
+  text-decoration: underline;
+}
+
+/* === TABS === */
+.tab-container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab:hover {
+  background-color: #f0f0f0;
+}
+
+.tab.active {
+  background-color: #fff;
+  border-bottom: 2px solid #E50B20;
+  color: #E50B20;
+}
+
+.tab-content {
+  display: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* === GUION === */
+.guion {
+  font-family: "Courier New", monospace;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #222;
+}
+</style>
+</head>
+<body>
+
+<!-- === REPRODUCTOR === -->
+<div class="podcast-card">
+  <div class="podcast-image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Karl_Marx_001.jpg" alt="Podcast">
+  </div>
+
+  <div class="podcast-info">
+    <h2>Verzátil</h2>
+    <h1>Episodio 01. La Sociedad del Cansancio</h1>
+
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress-bar" id="progressBarContainer">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time" id="timeDisplay">00:00 / 00:00</div>
+
+      <div class="volume-container">
+        <button class="volume-btn" id="volumeBtn">🔊</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="audio/" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- === PIE DE IMAGEN === -->
+<div class="podcast-footer">
+  <span>Duración: </span>
+  <span>Grabado el junio 12, 2025</span>
+  <span>Suscribir: <a href="#">Episodio aquí</a></span>
+</div>
+
+<!-- === PESTAÑAS === -->
+<div class="tab-container">
+  <div class="tabs">
+    <div class="tab active" data-tab="sinopsis">Sinopsis</div>
+    <div class="tab" data-tab="guion">Guion</div>
+    <div class="tab" data-tab="bibliografia">Bibliografía</div>
+  </div>
+
+  <div class="tab-content active" id="sinopsis">
+    <p>La sociedad del cansancio es una radiografía implacable de nuestra forma de estar en el mundo bajo la modernidad tardía. Ya no somos oprimidos únicamente por fuerzas externas; ahora somos también verdugos de nosotros mismos. Nos autoexigimos, nos vigilamos, nos exprimimos… y lo llamamos libertad.<br>
+    El resultado: agotamiento como medalla, ansiedad como rutina, insomnio como compañero nocturno.<br>
+    Entonces dime:<br>
+    ¿Qué tan cansado estás?<br>
+    ¿O ya olvidaste cómo se descansa?<br>
+    La crítica de Byung-Chul Han no habla del futuro. Habla de nosotros, hoy, aquí, en este preciso momento.</p>
+  </div>
+
+  <div class="tab-content guion" id="guion">
+<pre class="guion">
+“La sociedad del cansancio” 
+ 
+Departamento de Estudios Culturales
+Universidad Autónoma Metropolitana, Unidad Lerma
+ 
+Formato podcast 
+Escrito por: Edu Martiez 
+Producido por: Diego Valdez
+Versión. 2.
+Versátil: Temporada 2
+Fecha:17-06-2027
+Personajes: 
+Locutor: Eder 
+Ana :Fabiola 
+Luis :Isma
+Camila : Ili
+Monica :Jenn
+Karla :Eve
+Roberto:Sr. Alex.
+ABRE CON:
+Sonido ambiente: Tráfico mañanero. 
+
+(V.O.)  
+Eder. 
+Esta no es una era de prohibiciones, sino de sobreexigencia.
+Vivimos en una sociedad donde todo es posible, pero eso no nos hace más libres… nos hace más cansados.
+Aquí no reina el castigo, sino el rendimiento.
+Y en este mundo, el agotamiento no es un accidente: se trata de su mejor versión. 
+
+Sonido ambiente: sonido de acercamiento.
+Sonido ambiente: 3 segundos de silencio. 
+
+(V.O) 
+Locutor 
+(Reflexivo) 
+Una respuesta de protección ante un peligro moderno. 
+ (En eco…)
+VERSÁTIL. 
+
+Sonido ambiente.
+(V.O)
+Locutor:
+“verdugo y víctima.”
+
+Sonido ambiente: Ruido de salón,alumnos, chicharra, teléfonos sonando…
+Sonido ambiente: Alarma de chicharra de salida. 
+(V.O.)
+Ana: maestra de secundaria  
+(Bostezo) 
+(V.O)
+“Nadie me lo exige… pero si no termino esto hoy, se me acumula todo mañana.”
+(V.O) 
+Ana (frustrada)
+Hoy tenía que entregar los reportes. También planear la clase del viernes.(Suspira)Y contestar los mensajes de padres, revisar las tareas…
+Nadie me lo pidió. Pero si no lo hago, mañana será peor.
+ Ya es tarde... pero si no termino esto hoy, siento que estoy fallando.
+ Y si fallo, ¿entonces qué soy? Una mala maestra. Una floja. ¿No era mi vocación la docencia?
+ (Silencio)
+(V.O) 
+Locutor 
+Cada día da lo mejor. Cada día siente que es insuficiente. Cada día duerme menos. Cada día sobre piensa más. 
+Sabe que su vocación es enseñar, pero se ha convertido en más que una maestra, ahora es gestora, terapeuta, secretaría, madre sustituta, consejera, refugio…
+ (V.O)
+Maestra Ana
+“Pero nadie me obliga.”
+(V.O)
+Locutor.
+Pero algo dentro de ella, la empuja sin pausa. 
+Ya no tiene tiempo ni de pensar en si misma. 
+
+Sonido ambiente: 3 segundos de silencio. 
+Sonido ambiente:hospital, pitidos de monitores, pasos rápidos.
+
+(V.o)
+Locutor. 
+“Más allá de la disciplina"
+Sonido ambiente: 3 segundos de silencio. 
+
+Luis es enfermero en turno nocturno.
+Hoy le cambiaron el horario… otra vez.
+No le gritan. No lo castigan.
+Pero se espera que siempre diga que sí.
+Que sonría. Que aguante.
+
+(V.O.)
+Luis - Enfermero. 
+Luis (hablando con una compañera):
+
+ No he parado desde que llegué. A veces pienso que este hospital no cierra nunca.
+ Se supone que hoy iba a estar libre… pero dijeron que me necesitaban. Y claro, dije que sí. Como siempre.
+Compañera: Fabiola 
+ ¿Por qué no dijiste que no?
+Luis:
+ Porque siento culpa si lo hago. Porque sé que puedo y debo.
+ Ya no hay jefe gritándome. Yo solito aprendí a decirme “dale, puedes más”. y es que es mi trabajo, no puedo descuidarlo, y me han enseñado a que yo puedo con todo. 
+(V.O) 
+Locutor. 
+Más allá de la sociedad de la disciplina… Esta es la trampa de la libertad sin límites.
+
+Sonido ambiente: 3 segundos de silencio 
+Sonido ambiente: Sonido de chats, likes, notificaciones. 
+
+(V.O.)
+Locutor - 
+Camila tiene 21 años. Estudia educación.
+Abre Instagram. Ve a sus compañeras mostrar sus proyectos, viajes, logros, conciertos…
+Ella no publica nada. No…no puede.
+No porque no quiera.
+Sino porque no se siente capaz.
+
+(V.O.)
+Camilla.Estudiante 
+(suspiro) 
+ “¿Nueva expo en equipo?” 
+Sonido ambiente: Suspiro. 
+
+(V.O)
+ Camila:
+ Yo también tenía algo que mostrar… pero no terminé, Otra vez.
+ No es que no lo intente. Es que me agoto en el intento.
+ Todos avanzan. Yo me quedo aquí, sin fuerzas… y encima me culpo.
+
+“Quiero hacer algo, lo intento… pero me ahogo, no tengo nada en la mente, siento que no tengo nada que ofrecerle al mundo. 
+
+(V.O.)
+Locutor
+El deprimido no está a la altura. Está cansado del devenir del mismo.
+
+Sonido ambiente: 3 segundos de silencio
+Somiedo ambiente: Oficina, notificaciones. 
+
+(V.O)
+Locutor -  
+Mónica trabaja en una empresa de tecnología.
+Le encanta lo que hace…
+Pero cada día es un maratón, un tremendo caos…
+presentaciones, juntas , mediación de producciones audiovisuales, coordinación de eventos, es una adulta “funcional”.
+El jefe no la presiona.
+Ella se exige sola.
+
+(V.O)
+Mónica
+“No tengo un jefe estricto, soy perfeccionista,  a mí nadie me presiona.
+(suspiro/casada):
+Pero la app me dice cuántas tareas hice, el software mide mi productividad, y en la junta semanal… (suspiro frustrado ) bueno, todos esperan que sea la mejor.
+A mi nadie me controla. yo solita me convierto en la mente que me juzga.”
+
+
+(V.O.)
+Locutor
+La sociedad del siglo XXI ya no es disciplinaria… es una sociedad del rendimiento.
+
+Sonido ambiente: 3 segundos de silencio 
+Sonido ambiente: Hogareño,  llanto leve de bebé, tele encendida, perro ladrando, ruido de la cocina. 
+
+(V.O.)
+Locutor - 
+Karla es mamá, ingeniera y emprendedora.
+Su cuerpo no duele. Su mente sí.
+Se acuesta tarde, duerme mal. Despierta agitada.
+
+(V.O)
+Karla
+En llamada
+(Casada y sarcástica) 
+No sé qué tengo, estoy cansada todo el tiempo… pero no es un cansancio físico.
+ Es como si mi cabeza no pudiera apagar nada: pendientes, correos, tareas, decisiones.
+  Hasta cuando me acuesto, estoy pensando en todo lo que no hice.
+Novio:
+ — ¿Y si te tomas un día libre?
+karla: responde enojada
+ ¿Y quién crees va a hacer todo? todo depende de mí.
+ Sonido Ambiente: (3 segundos de silencio)
+(suspiro/frustración) 
+ No es que no quiera descansar… es que no sé cómo, “Todo urge… incluso en la madrugada. Todo me sigue… hasta en el baño.”
+Sonido ambiente: Ruido del inodoro 
+
+(V.O)
+Locutor - 
+El agotamiento, la fatiga y la asfixia moderna ya no es muscular. Es nerviosa. Es permanente.
+ Es una violencia que no deja moretones… pero da insomnio, gastritis, tristeza.
+No es del todo notable, pero tarde o temprano…se manifiesta. 
+Sonido ambiente: 3 segundos de silencio 
+Sonido ambiente : 
+(V.O)
+Locutor - 
+Sobreabundancia de lo idéntico. 
+Roberto(voz cansada y estresada): 
+Todos quieren lo mismo: rápido, visual, viral.
+ Todo se parece, todos los días son iguales.
+ Y yo también me estoy pareciendo a todo… menos a mí mismo.
+ Ya no sé si estoy haciendo diseño… o ruido.
+Donde quedó el ser creativo…dónde quedó esa originalidad del ser. 
+Narrador/a:
+ La violencia neuronal no proviene de algo externo, sino de la sobreabundancia de lo idéntico. 
+
+Sonido ambiente: 3 segundos de silencio 
+Sonido ambiente: Corto circuito 
+(V.O.)
+Locutor.
+Vivimos en una época donde el enemigo ya no está afuera.
+Está dentro.
+En la forma en que nos decimos:
+Haz más. Sé más. No pares. 
+Nadie dijo que está mal tener talento, estar estudiando, tener capacidades, inteligencia, tenemos que ser buenos en lo que hacemos, pero a veces aceptar que no siempre podemos hacerlo todo. 
+Podemos luchar por alcanzar nuestros sueños, pero es mucho mejor ser dueño de ti mismo. 
+Hay un éxito existencial, ¿Quién soy yo, y que quiero hacer yo de mi vida, de esta tu única oportunidad de estar aquí? 
+¿Y tú?
+¿A quién le estás rindiendo cuentas?
+¿Quién te está exigiendo tanto…? no es el mundo, eres tú mismo
+La sociedad del cansancio nos advierte que el peligro ya no está en la opresión externa… sino en la autoexplotación interior.
+ Ya no vivimos bajo el “debes obedecer”, sino bajo el “puedes lograrlo todo”.
+ Y esa ilusión de libertad nos convierte en nuestros propios verdugos.
+El agotamieto, la ansiedad, el insomnio, no son fallos individuales,
+ sino síntomas de una sociedad que ha confundido vivir con producir,
+ ser con rendir.
+Recuperar el silencio, el límite, la pausa…
+ no es una pérdida.
+ Es una forma de resistencia.
+ De humanidad.
+Sonido ambiente: Eco
+
+ De libertad auténtica.
+
+
+Pop A: 
+CORTINILLAS INSTITUCIONALES
+
+
+TERMINA EPISODIO
+
+</pre>
+  </div>
+
+  <div class="tab-content" id="bibliografia">
+    <p>Han, B.-C. (2012). La sociedad del cansancio. Herder Editorial.<br>
+    Autor: Han, Byung-Chul.<br>
+    Año de publicación: 2012.<br>
+    Título del libro: La sociedad del cansancio.<br>
+    Editorial: Herder Editorial.<br>
+    Traductor: Arantzazu Saratxaga Arregi.</p>
+  </div>
+</div>
+
+<script>
+/* === REPRODUCTOR === */
+const playBtn = document.getElementById("playBtn");
+const audio = document.getElementById("audio");
+const progress = document.getElementById("progress");
+const progressBarContainer = document.getElementById("progressBarContainer");
+const timeDisplay = document.getElementById("timeDisplay");
+const volumeControl = document.getElementById("volumeControl");
+const volumeBtn = document.getElementById("volumeBtn");
+
+function formatTime(seconds){
+  if(isNaN(seconds)) return "00:00";
+  const min = Math.floor(seconds/60);
+  const sec = Math.floor(seconds%60);
+  return `${min.toString().padStart(2,"0")}:${sec.toString().padStart(2,"0")}`;
+}
+
+playBtn.addEventListener("click", ()=>{
+  if(audio.paused){ audio.play(); playBtn.textContent="⏸"; }
+  else { audio.pause(); playBtn.textContent="▶"; }
+});
+
+audio.addEventListener("timeupdate", ()=>{
+  const percent = (audio.currentTime/audio.duration)*100;
+  progress.style.width = percent+"%";
+  timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+});
+
+audio.addEventListener("ended", ()=>{
+  playBtn.textContent="▶";
+  progress.style.width="0%";
+});
+
+// PROGRESO ARRASTRABLE
+let isDragging = false;
+progressBarContainer.addEventListener("mousedown", e=>{
+  isDragging = true;
+  moveProgress(e);
+});
+window.addEventListener("mousemove", e=>{
+  if(isDragging) moveProgress(e);
+});
+window.addEventListener("mouseup", e=>{
+  if(isDragging){ moveProgress(e,true); isDragging=false; }
+});
+
+function moveProgress(e, apply=false){
+  const rect = progressBarContainer.getBoundingClientRect();
+  let offsetX = e.clientX - rect.left;
+  offsetX = Math.max(0, Math.min(offsetX, rect.width));
+  const percent = offsetX / rect.width;
+  progress.style.width = (percent*100)+"%";
+  if(apply) audio.currentTime = percent*audio.duration;
+}
+
+// VOLUMEN
+volumeControl.addEventListener("input", ()=>{
+  audio.volume = volumeControl.value;
+  volumeBtn.textContent = audio.volume==0?"🔇":"🔊";
+});
+
+// TABS
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    tabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const target = tab.dataset.tab;
+    contents.forEach(c=> c.classList.toggle('active', c.id===target));
+  });
+});
+</script>
+
+</body>
+</html>
