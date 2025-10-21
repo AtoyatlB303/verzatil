@@ -1,240 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Podcast - La Sociedad del Cansancio</title>
-<style>
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #ffffff;
-  padding: 40px;
-  color: #333;
-  margin:0;
-}
-
-/* === TARJETA DEL PODCAST === */
-.podcast-card {
-  display: flex;
-  align-items: center;
-  background-color: #400309;
-  color: white;
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto 30px auto;
-  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
-}
-
-.podcast-image {
-  flex: 0 0 90px;
-  height: 90px;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-right: 20px;
-}
-
-.podcast-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.podcast-info {
-  flex: 1;
-}
-
-.podcast-info h2 {
-  font-size: 0.95rem;
-  color: #b8b4c8;
-  margin: 0;
-}
-
-.podcast-info h1 {
-  font-size: 1.2rem;
-  margin: 4px 0 12px;
-  color: #fff;
-  line-height: 1.3;
-}
-
-/* === REPRODUCTOR === */
-.audio-player {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.play-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: #fff;
-  color: #2b2535;
-  font-size: 22px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.play-btn:hover {
-  transform: scale(1.1);
-}
-
-.progress-bar {
-  flex: 1;
-  height: 6px;
-  background: #4a4458;
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0%;
-  background-color: #ff0000;
-  border-radius: 4px;
-  transition: width 0.2s linear;
-}
-
-.time {
-  font-size: 0.8rem;
-  color: #ccc;
-  min-width: 80px;
-  text-align: right;
-}
-
-.volume-container {
-  position: relative;
-}
-
-.volume-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#volumeControl {
-  display: none;
-  position: absolute;
-  bottom: 30px;
-  left: -20px;
-  transform: rotate(-90deg);
-  width: 100px;
-}
-
-.volume-container:hover #volumeControl,
-#volumeControl:hover {
-  display: block;
-}
-
-/* === PIE DE IMAGEN === */
-.podcast-footer {
-  max-width: 800px;      /* Igual que .podcast-card */
-  margin: 0 auto 30px auto; /* Centrado con mismo margen */
-  background-color: #ffffff;
-  padding: 14px 18px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 8px 20px;
-  font-size: 0.85rem;
-  color: #504f53;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.footer-left, .footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.footer-left span, .footer-right span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.podcast-footer a {
-  color: #9ac8ff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.podcast-footer a:hover {
-  text-decoration: underline;
-}
-
-/* === TABS === */
-.tab-container {
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #ddd;
-}
-
-.tabs {
-  display: flex;
-  border-bottom: 1px solid #ddd;
-}
-
-.tab {
-  flex: 1;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 600;
-  color: #555;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tab:hover {
-  background-color: #f0f0f0;
-}
-
-.tab.active {
-  background-color: #fff;
-  border-bottom: 2px solid #E50B20;
-  color: #E50B20;
-}
-
-.tab-content {
-  display: none;
-  padding: 15px 20px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-/* === GUION === */
-.guion {
-  font-family: "Courier New", monospace;
-  white-space: pre-wrap;
-  line-height: 1.5;
-  font-size: 14px;
-  color: #222;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcast - La Sociedad del Cansancio</title>
+  <link rel="stylesheet" href="lasociedaddelcansancio.css" />
 </head>
 <body>
 
-<!-- === REPRODUCTOR === -->
+<!-- === TARJETA DEL PODCAST === -->
 <div class="podcast-card">
   <div class="podcast-image">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Karl_Marx_001.jpg" alt="Podcast">
+    <img src="1et2.jpeg" alt="Podcast">
   </div>
 
   <div class="podcast-info">
@@ -246,24 +23,26 @@ body {
       <div class="progress-bar" id="progressBarContainer">
         <div class="progress" id="progress"></div>
       </div>
-      <div class="time" id="timeDisplay">00:00 / 00:00</div>
+      <div class="time" id="timeDisplay">00:00 / 12:05</div>
 
       <div class="volume-container">
-        <button class="volume-btn" id="volumeBtn">🔊</button>
+        <button class="volume-btn" id="volumeBtn">
+          <img id="volumeIcon" src="iconos/alto-volumen.png" alt="Volumen" width="22">
+        </button>
         <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
       </div>
     </div>
   </div>
 
   <audio id="audio">
-    <source src="audio/" type="audio/mpeg">
+    <source src="audio/LA SOCIEDAD DEL CANSANCIO.m4a" type="audio/mpeg">
   </audio>
 </div>
 
 <!-- === PIE DE IMAGEN === -->
 <div class="podcast-footer">
-  <span>Duración: </span>
-  <span>Grabado el junio 12, 2025</span>
+  <span>Duración: 12:05</span>
+  <span>Escrito por: Eder Eduardo Martinez Ruiz </span>
   <span>Suscribir: <a href="#">Episodio aquí</a></span>
 </div>
 
@@ -276,16 +55,22 @@ body {
   </div>
 
   <div class="tab-content active" id="sinopsis">
-    <p>La sociedad del cansancio es una radiografía implacable de nuestra forma de estar en el mundo bajo la modernidad tardía. Ya no somos oprimidos únicamente por fuerzas externas; ahora somos también verdugos de nosotros mismos. Nos autoexigimos, nos vigilamos, nos exprimimos… y lo llamamos libertad.<br>
-    El resultado: agotamiento como medalla, ansiedad como rutina, insomnio como compañero nocturno.<br>
-    Entonces dime:<br>
-    ¿Qué tan cansado estás?<br>
-    ¿O ya olvidaste cómo se descansa?<br>
-    La crítica de Byung-Chul Han no habla del futuro. Habla de nosotros, hoy, aquí, en este preciso momento.</p>
+    <p>La sociedad del cansancio es una radiografía implacable de nuestra forma de estar en el mundo bajo la modernidad tardía. Ya no somos oprimidos únicamente por fuerzas externas; ahora somos también verdugos de nosotros mismos. Nos autoexigimos, nos vigilamos, nos exprimimos… y lo llamamos libertad.
+      <br> 
+      El resultado: agotamiento como medalla, ansiedad como rutina, insomnio como compañero nocturno.
+      <br> 
+      Entonces dime:
+      <br> 
+      ¿Qué tan cansado estás?
+      <br> 
+      ¿O ya olvidaste cómo se descansa?
+      <br> 
+      La crítica de Byung-Chul Han no habla del futuro. Habla de nosotros, hoy, aquí, en este preciso momento.
+    </p>
   </div>
 
   <div class="tab-content guion" id="guion">
-<pre class="guion">
+    <pre class="guion">
 “La sociedad del cansancio” 
  
 Departamento de Estudios Culturales
@@ -514,95 +299,27 @@ Sonido ambiente: Eco
 Pop A: 
 CORTINILLAS INSTITUCIONALES
 
-
 TERMINA EPISODIO
 
-</pre>
+    </pre>
   </div>
 
   <div class="tab-content" id="bibliografia">
-    <p>Han, B.-C. (2012). La sociedad del cansancio. Herder Editorial.<br>
-    Autor: Han, Byung-Chul.<br>
-    Año de publicación: 2012.<br>
-    Título del libro: La sociedad del cansancio.<br>
-    Editorial: Herder Editorial.<br>
-    Traductor: Arantzazu Saratxaga Arregi.</p>
+    <p>Han, B.-C. (2012). La sociedad del cansancio. Herder Editorial.
+      <br> 
+      Autor: Han, Byung-Chul.
+      <br> 
+      Año de publicación: 2012.
+      <br> 
+      Título del libro: La sociedad del cansancio.
+      <br> 
+      Editorial: Herder Editorial.
+      <br> 
+      Traductor: Arantzazu Saratxaga Arregi.
+    </p>
   </div>
 </div>
 
-<script>
-/* === REPRODUCTOR === */
-const playBtn = document.getElementById("playBtn");
-const audio = document.getElementById("audio");
-const progress = document.getElementById("progress");
-const progressBarContainer = document.getElementById("progressBarContainer");
-const timeDisplay = document.getElementById("timeDisplay");
-const volumeControl = document.getElementById("volumeControl");
-const volumeBtn = document.getElementById("volumeBtn");
-
-function formatTime(seconds){
-  if(isNaN(seconds)) return "00:00";
-  const min = Math.floor(seconds/60);
-  const sec = Math.floor(seconds%60);
-  return `${min.toString().padStart(2,"0")}:${sec.toString().padStart(2,"0")}`;
-}
-
-playBtn.addEventListener("click", ()=>{
-  if(audio.paused){ audio.play(); playBtn.textContent="⏸"; }
-  else { audio.pause(); playBtn.textContent="▶"; }
-});
-
-audio.addEventListener("timeupdate", ()=>{
-  const percent = (audio.currentTime/audio.duration)*100;
-  progress.style.width = percent+"%";
-  timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
-});
-
-audio.addEventListener("ended", ()=>{
-  playBtn.textContent="▶";
-  progress.style.width="0%";
-});
-
-// PROGRESO ARRASTRABLE
-let isDragging = false;
-progressBarContainer.addEventListener("mousedown", e=>{
-  isDragging = true;
-  moveProgress(e);
-});
-window.addEventListener("mousemove", e=>{
-  if(isDragging) moveProgress(e);
-});
-window.addEventListener("mouseup", e=>{
-  if(isDragging){ moveProgress(e,true); isDragging=false; }
-});
-
-function moveProgress(e, apply=false){
-  const rect = progressBarContainer.getBoundingClientRect();
-  let offsetX = e.clientX - rect.left;
-  offsetX = Math.max(0, Math.min(offsetX, rect.width));
-  const percent = offsetX / rect.width;
-  progress.style.width = (percent*100)+"%";
-  if(apply) audio.currentTime = percent*audio.duration;
-}
-
-// VOLUMEN
-volumeControl.addEventListener("input", ()=>{
-  audio.volume = volumeControl.value;
-  volumeBtn.textContent = audio.volume==0?"🔇":"🔊";
-});
-
-// TABS
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab-content');
-tabs.forEach(tab=>{
-  tab.addEventListener('click', ()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    const target = tab.dataset.tab;
-    contents.forEach(c=> c.classList.toggle('active', c.id===target));
-  });
-});
-</script>
-
+<script src="lasociedaddelcansancio.js"></script>
 </body>
 </html>
