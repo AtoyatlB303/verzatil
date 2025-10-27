@@ -10,13 +10,13 @@ body {
 .podcast-card {
   display: flex;
   align-items: center;
-  background-color: #400309;
+  background-color: #4D4C48;
   color: white;
   border-radius: 12px;
   padding: 20px;
   max-width: 800px;
   margin: 0 auto 30px auto;
-  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.6);
 }
 
 .podcast-image {
@@ -63,7 +63,7 @@ body {
   border-radius: 50%;
   border: none;
   background-color: #fff;
-  color: #2b2535;
+  color: #3f2e18;
   font-size: 22px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -76,7 +76,7 @@ body {
 .progress-bar {
   flex: 1;
   height: 6px;
-  background: #4a4458;
+  background: #3f2e18;
   border-radius: 4px;
   position: relative;
   overflow: hidden;
@@ -89,7 +89,7 @@ body {
   left: 0;
   height: 100%;
   width: 0%;
-  background-color: #ff0000;
+  background-color: #ab7b40;
   border-radius: 4px;
   transition: width 0.2s linear;
 }
