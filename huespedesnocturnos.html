@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verzátil - Huespedes Nocturnos</title>
+  <link rel="stylesheet" href="huespedesnocturnos.css" />
+</head>
+<body>
+
+<!-- === TARJETA DEL PODCAST === -->
+<div class="podcast-card">
+  <div class="podcast-image">
+    <img src="ver1.png" alt="Podcast">
+  </div>
+
+  <div class="podcast-info">
+    <h2>Verzátil</h2>
+    <h1>Episodio 03. Huespedes Nocturnos</h1>
+
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress-bar" id="progressBarContainer">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time" id="timeDisplay">00:00 / 12:05</div>
+
+      <div class="volume-container">
+        <button class="volume-btn" id="volumeBtn">
+          <img id="volumeIcon" src="iconos/alto-volumen.png" alt="Volumen" width="22">
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="audio/" type="audio/mp4">
+  </audio>
+</div>
+
+<!-- === PIE DE IMAGEN === -->
+<div class="podcast-footer">
+  <span>Duración: 11:11</span>
+  <span>Escrito por: M.R. Lex </span>
+  <span>Visita el episodio <a href="" target="_blank" rel="noopener noreferrer">aquí</a></span>
+</div>
+
+<!-- === PESTAÑAS === -->
+<div class="tab-container">
+  <div class="tabs">
+    <div class="tab active" data-tab="sinopsis">Sinopsis</div>
+    <div class="tab" data-tab="guion">Guion</div>
+    <div class="tab" data-tab="bibliografia">Bibliografía</div>
+  </div>
+
+  <div class="tab-content active" id="sinopsis">
+    <p>En “Los huéspedes nocturnos”, un nuevo episodio de la segunda temporada de Versátil, la oscuridad se convierte en protagonista. A través de las voces de L’exoth y Belx’ceph, nos adentramos en una vieja casa donde el tiempo parece haberse detenido y las paredes guardan los secretos de los que alguna vez durmieron bajo su techo. Lo que comienza como una simple exploración nocturna se transforma en un relato perturbador sobre la presencia de los incubus y succubus, seres que acechan en los sueños para devorar la esencia de quienes los invocan sin saberlo. Con una atmósfera cargada de misterio, sonidos inquietantes y un ritmo que crece hasta el silencio final, este episodio invita al oyente a preguntarse si los verdaderos huéspedes de la noche están en la historia... o al otro lado de sus propios sueños.
+    </p>
+  </div>
+
+  <div class="tab-content guion" id="guion">
+    <pre class="guion">
+“Los huéspedes nocturnos” 
+ 
+Departamento de Estudios Culturales
+Universidad Autónoma Metropolitana, Unidad Lerma
+ 
+Formato podcast 
+Escrito por: 
+Martinez Ruiz  Alejandro(M.R.Lex)
+Producido por: Diego Valdez
+Versión. 1.
+Versátil: Temporada 2
+
+
+[Sonidos: viento silbando entre las rendijas, un reloj antiguo que marca la medianoche, crujidos de madera vieja.]
+
+[Introducción - 0:30 min]
+L'exoth (misterioso, pausado):
+“Bienvenidos a Voces del Inframundo... Esta noche, nos adentramos en los pasillos de una casa donde el tiempo se detuvo, donde las paredes susurran secretos de quienes cruzaron su umbral... y nunca despertaron igual. Porque hay huéspedes que llegan sin ser invitados... y que se alimentan del más profundo de tus sueños.”
+
+[Diálogo - Desarrollo 2:00-3:00 min]
+Belx’ceph (curioso, explorando):
+“¿Por qué esta casa tiene esa reputación? Es solo un montón de habitaciones vacías y muebles viejos... aunque... se siente como si alguien estuviera observándonos.”
+
+L'exoth (profundo, pausado):
+“Las casas antiguas nunca están vacías. Esta en particular... fue testigo de algo oscuro. Se habla de los huéspedes nocturnos.”
+
+Belx’ceph (intrigado):
+“¿Huéspedes nocturnos? ¿De quién hablas?”
+
+L'exoth (con tono profético):
+“Los conoces como incubus y succubus. Demonios que visitan en la penumbra de la noche. Criaturas que toman la forma de tus deseos más íntimos, pero que no buscan placer... buscan consumir tu fuerza vital.”
+
+(Pausa breve. El viento arrecia, se escucha una respiración suave pero inquietante a lo lejos.)
+
+Belx’ceph (nervioso, intentando bromear):
+“Vamos, suena como un cuento antiguo. ¿Quién creería en eso hoy en día?”
+
+L'exoth (grave, como recitando una historia perdida):
+“No importa si crees en ellos... porque si te eligen, te visitarán. Primero llegan como un sueño. Una figura perfecta, seductora, que susurra tu nombre desde las sombras. Pero cuando despiertas... no eres el mismo.”
+
+(Sonidos: pasos lentos que vienen del techo, el crujido de una puerta abriéndose ligeramente en otra habitación.)
+
+[Relato - Las señales de su presencia]
+Belx’ceph (con un hilo de voz):
+“Y... ¿cómo sabes si un succubus o un incubus te están rondando?”
+
+L'exoth (pausado, con intensidad creciente):
+“Primero... los sueños. Sueños tan vívidos que parecen reales. Despiertas agotado, sintiendo un peso sobre el pecho... como si algo o alguien te estuviera sofocando.”
+
+(Sonido: respiración pesada, un susurro apenas audible que pronuncia el nombre de Belx’ceph en el fondo.)
+
+Belx’ceph (mirando a su alrededor, inquieto):
+“Espera... ¿escuchaste eso? Pareció... mi nombre.”
+
+L'exoth (sin inmutarse):
+“Luego... el frío. Las habitaciones se vuelven heladas de repente, como si alguien invisible estuviera de pie junto a ti.”
+
+(Sonido: un viento frío recorre la habitación, seguido de un golpe seco como si algo hubiera caído.)
+
+Belx’ceph (cada vez más nervioso):
+“¿Pero cómo los detienes? ¿Cómo los... echas?”
+
+L'exoth (en tono ominoso):
+“No puedes. Ellos eligen cuándo irse... si es que deciden irse.”
+
+(Silencio tenso. El reloj suena marcando las 3 de la madrugada. “Dong... Dong... Dong...”)
+
+[Cierre - 0:30-1:00 min]
+Belx’ceph (susurrando, casi temblando):
+“L’exoth... creo que alguien está aquí. Escucho... respiración en el pasillo.”
+
+(Sonido: pasos suaves avanzando lentamente hacia la habitación, acompañados de una risa femenina baja y perturbadora.)
+
+L'exoth (en tono solemne, como si aceptara un destino inevitable):
+“Entonces ya es tarde. No les abras la puerta, Belx’ceph... y por ningún motivo, te atrevas a cerrar los ojos.”
+
+(El sonido de una puerta abriéndose de golpe, un grito ahogado y luego... silencio absoluto. Solo queda el viento.)
+
+[Desvanecimiento de sonidos: viento suave, la risa distante que se pierde poco a poco]
+L'exoth (en un susurro final, dirigido al oyente):
+“Si esta noche sientes frío y escuchas tu nombre en un susurro... no mires. Porque quizás, ellos también te eligieron.”
+
+(Música tétrica cierra el episodio.)
+
+    </pre>
+  </div>
+
+  <div class="tab-content" id="bibliografia">
+    <p>-Haas, J. (1994). The assassination of Fred Hampton: How the FBI and the Chicago Police murdered a Black Panther.Chicago Review Press.
+
+-Staton, S., Jr. (Ed.). (2019). The Fred Hampton reader. University of Illinois Press.
+
+-Marable, M., & Mullings, L. (Eds.). (2018). Let nobody turn us around: Voices of resistance, reform, and renewal.Rowman & Littlefield Publishers.
+
+-United States National Archives. (2020, August 25). Fred Hampton (August 30, 1948 – December 4, 1969).https://www.archives.gov/research/african-americans/individuals/fred-hampton
+
+-Encyclopaedia Britannica. (n.d.). Fred Hampton | Biography, Black Panthers, death & civil rights. Retrieved October 27, 2025, from https://www.britannica.com/biography/Fred-Hampton
+
+-Smithsonian Magazine. (2021, February). The true history behind “Judas and the Black Messiah.”https://www.smithsonianmag.com/history/true-history-behind-judas-and-black-messiah-180976975/
+
+-Chicago History Museum. (2022, December 4). Bibliography: Primary sources – Fred Hampton [PDF]. https://www.chicagohistory.org/app/uploads/2023/08/4_Hampton_NHD_biblio-CMHD-Example.pdf
+
+-King, S. (Director), & Berson, W. (Screenwriter). (2021). Judas and the Black Messiah [Film]. Warner Bros.
+
+-El Dollop. (2023, February 20). E163 – Fred Hampton: Pantera Negra [Audio podcast episode]. In El Dollop Podcast.Apple Podcasts. https://podcasts.apple.com/…/e163-fred-hampton-pantera-negra/id1501444997?i=1000600546462
+
+-Anthony, D., & Reynolds, G. (2016, October 24). 214 – Black Panther Fred Hampton [Audio podcast episode]. In The Dollop with Dave Anthony & Gareth Reynolds. Omny.fm. https://omny.fm/shows/the-dollop-with-dave-anthony-and-gareth-reynolds/214-black-panther-fred-hampton
+    </p>
+  </div>
+</div>
+
+<script src="huespedesnocturnos.js"></script>
+</body>
+</html>
