@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página en mantenimiento</title>
+  <style>
+    body {
+      background: white;
+      color: black;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    img.gif {
+      width: 20%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* Botón flotante de sonido */
+    #botonAudio {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      filter: invert(1);
+    }
+
+    #botonAudio img {
+      width: 40px;
+      height: 40px;
+      
+    }
+
+    #botonAudio:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botón flotante de sonido -->
+  <button id="botonAudio">
+    <img id="iconoAudio" src="iconos/silencio.png" alt="Activar sonido">
+  </button>
+
+  <h1>Sitio en mantenimiento</h1>
+  <p>Estamos trabajando para mejorar tu experiencia. Gracias por tu paciencia.</p>
+
+  <!-- GIF centrado -->
+  <img src="recursos/pato-duck.gif" alt="Mantenimiento en progreso" class="gif">
+
+  <!-- Música -->
+  <audio id="musica" autoplay loop muted>
+    <source src="recursos/hey-ya-lyrics.m4a" type="audio/mp4">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+
+  <script>
+    const boton = document.getElementById('botonAudio');
+    const icono = document.getElementById('iconoAudio');
+    const musica = document.getElementById('musica');
+
+    boton.addEventListener('click', () => {
+      if (musica.muted) {
+        musica.muted = false;
+        musica.play();
+        icono.src = 'iconos/alto-volumen.png';
+        icono.alt = 'Desactivar sonido';
+      } else {
+        musica.muted = true;
+        icono.src = 'iconos/silencio.png';
+        icono.alt = 'Activar sonido';
+      }
+    });
+  </script>
+
+</body>
+</html>
