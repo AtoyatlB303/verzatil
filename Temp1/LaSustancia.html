@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verzátil - La Sustancia</title>
+  <link rel="stylesheet" href="LaSustancia.css" />
+</head>
+<body>
+
+<!-- === TARJETA DEL PODCAST === -->
+<div class="podcast-card">
+  <div class="podcast-image">
+    <img src="imagen1/versatil.png" alt="Podcast">
+  </div>
+
+  <div class="podcast-info">
+    <h2>Verzátil</h2>
+    <h1>Episodio 01. La Sustancia</h1>
+
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress-bar" id="progressBarContainer">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time" id="timeDisplay">00:00 / 10:05</div>
+
+      <div class="volume-container">
+        <button class="volume-btn" id="volumeBtn">
+          <img id="volumeIcon" src="iconos/alto-volumen.png" alt="Volumen" width="22">
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="audiotemp1/LaSustancia.m4a" type="audio/mp4">
+  </audio>
+</div>
+
+<!-- === PIE DE IMAGEN === -->
+<div class="podcast-footer">
+  <span>Duración: 10:05</span>
+  <span>Escrito por: Daniela Corona, Alberto Romero, Sofía Vázquez y Brisa Quevedo. </span>
+  <span>Visita el episodio <a href="https://youtu.be/3XKDiq-UHVk?si=H7gDYARvGj4eU7Wk" target="_blank" rel="noopener noreferrer">aquí</a></span>
+</div>
+
+<!-- === PESTAÑAS === -->
+<div class="tab-container">
+  <div class="tabs">
+    <div class="tab active" data-tab="sinopsis">Sinopsis</div>
+    <div class="tab" data-tab="guion">Guion</div>
+  </div>
+
+  <div class="tab-content active" id="sinopsis">
+    <p>En este episodio de Versátil, una conversación aparentemente cotidiana se convierte en una reflexión crítica sobre los estándares de belleza impuestos a los cuerpos femeninos en la industria del entretenimiento. A partir de un sueño perturbador y referencias al cine, las celebridades y la película La Sustancia, el pódcast expone la obsesión por la juventud, la perfección y la imagen como formas de control que siguen moldeando oportunidades, deseos y miedos. Entre el humor y la crítica, el episodio cuestiona hasta dónde puede llegar la industria y las personas por encajar en un ideal imposible.
+    </p>
+  </div>
+
+  <div class="tab-content guion" id="guion">
+    <pre class="guion">
+Versátil 
+Temporada dos
+Título pendiente
+Episodio #
+Guión
+Escrito por: 
+Brisa Quevedo Jordan
+Jennifer Daniela Corona Carrasco
+Jose Alberto Romero Torres
+Sofia Maribel Vazquez Orihuela
+Formato: Pódcast
+Departamento de Estudios Culturales
+Universidad Autónoma Metropolitana, Unidad Lerma
+Versión 4
+Fecha: 18 Diciembre de 2024
+Contacto: UAM Lerma
+TÍTULO PENDIENTE
+LA IDEA DEL CUERPO FEMENINO EN LA INDUSTRIA
+ DEL ENTRETENIMIENTO 
+ 
+ACTO 1: INTRODUCCIÓN
+Daniela (Narrador protagonista):
+Buenos días, tardes o noches, sean bienvenidos, amantes del cine. Soy Daniela, y en este episodio hablaremos sobre las ideas conservadoras que han permanecido y sido reforzadas en la industria del entretenimiento.
+Subida y bajada de música tipo intro (5 segundos)
+ACTO 2: ESCENA DEL SUEÑO
+Sofia (Narrador protagonista):
+Me ha gustado mucho tu casting, tienes una buena voz y eres muy profesional. Solo hay un gran problema: pareces muy grande para ser presentadora de este show. No nos sirves, solo sería desperdicio de maquillaje y dinero.
+Daniela (desesperación):
+¡Nooo, por favor, nooo! Apenas tengo ##…
+Sonido: Entrada y salida de alarma tipo despertador (8 segundos). ACTO 3: CONTEXTO Y ANÁLISIS
+Beto (V.O.):
+Bien dicen que los sueños son reflejos del inconsciente. Y con tantas cosas que estamos acostumbrados a ver, ni modo y no. Es en la pantalla que nacen los estereotipos, específicamente los femeninos: piel blanca, cuerpo sensual y delgado,cabello rubio, ¿Les suena? ¿Tienen alguna cara en mente?
+La idea de una mujer perfecta siempre ha existido, y solo cambia de nombre y apellido.
+Rostros tan lindos como el de Margot Robbie, que no por nada interpretó tan bien su papel en Barbie; O Scarlett Johanson, motivo por el que muchos entraron al universo Marvel. O Megan Fox, que fue el crush de toda una generación.  O… alguien más como Ana de Armas, Rebecca Ferguson o Elizabeth Olsen que embellecen con el tiempo a pesar de estar acercándose a los 40 años o incluso ya pisandolos. 
+Todas ellas han tenido que encajar en moldes fabricados para sus personajes y hechos para reforzar la idea de que las mujeres son casi talladas a manos por Dios. 
+Voz que interrumpe:
+Bueno, pero esos ejemplos solo hablan de mujeres que llevan rato en la industria, yo supongo que eso desaparecerá con el tiempo.
+Además no pasa nada si hoy, alguna actriz se muestra tal cual es, estamos en la era del Body Positive.
+  	Beto (V.O.):
+Pues aunque no lo creas esta conversación está presente en más de un grupo de amigas en este momento.
+Y para hablar perfectamente de este tema tenemos un ejemplo bastante gráfico: La Sustancia, película dirigida por Coralie Fargeat y protagonizada por Demi Moore y Margaret Qualley. En esta historia se toca perfectamente lo que pasa cuando nos resistimos a envejecer, aunque claro viéndolo como una sátira al cine Gore. 
+En la película, el cuerpo es un componente central de la identidad. A medida que la protagonista, Elisabeth Sparkle, consume una droga experimental, su cuerpo sufre transformaciones físicas que afectan tanto su apariencia como su sentido de sí misma. Es una crítica directa al culto a la perfección y a la dependencia de soluciones rápidas.
+Sonido: Subida y bajada de música de cine (10 segundos).
+Daniela:
+No saben, anoche tuve un sueño horrible, de esos que parecen reales.
+Brisa:
+¿Qué soñaste?
+Daniela:
+Pues estaba en un casting para un nuevo reality. Lo estaba dando todo: usé mi mejor voz, mis mejores ángulos y busqué la mejor luz. Pero cuando terminaba, la directora me rechazaba porque “me veía muy grande” para ser presentadora.
+Brisa:
+¡No digas! ¿Cómo pudo ser tan imprudente?
+Daniela:
+Ya sé. Y siento que todo empezó porque ayer me encontré una arruga nueva. No entiendo de dónde salió. Siempre cuido mi piel, uso protector solar y tengo una gran rutina de skincare.
+Sofia (en tono publicitario):
+¿Cansada de los problemas con la piel? ¿Del paso del tiempo en tu ser? ¿De usar mil productos y que nada funcione? Prueba La Sustancia, el nuevo tratamiento experimental que te hará verte como una nueva persona. Llame ahora al…
+Daniela (interrumpe, en tono divertido):
+Jajaja, ¿de qué estás hablando, Sofia? Suena como algo doloroso. Brisa:
+¡Jajaja! Te pusiste creativa, Sofia. A mí también me suena como algo doloroso, que te cambia completamente.
+Sofia:
+Jajaja, a mí también, algo como cuando Shrek toma la poción del hada madrina y despierta como un galán que no se parece en nada al ogro nadaqueveriento.
+Sonido: Subida y bajada de música cómica (5 segundos).
+Daniela: 
+Pero ya fuera de broma, ¿se imaginan que existiera algo así?
+Sofía: 
+Ay, pues la verdad si existiera yo lo probaría.
+Brisa: 
+Tampoco creo que estemos muy lejos, eh.
+Sofia: 
+Pues no eh, con todos los tratamientos que ya existen, y para tantas cosas, no me parecería tan sorprendente o descabellado.
+Daniela: 
+Y es que, ¿no han visto los cambios recientes de muchas celebridades?, a mi el que más me impactó fue el de Christina Aguilera, su cambio fue rapidísimo, hace unos meses veíamos una versión, y hoy ya es otra.
+Sofia: 
+A mí el de Lindsay Lohan, tipo, hace unos años la vimos muy mal, entiendo que tenía problemas de salud, pero la forma en la que se veía en ese entonces, no tiene mínima comparación con lo bien que se ve actualmente.
+Brisa: 
+Justo; a mí el que más me impactó fue el de Donatella Versace, ella ha sido vista desde hace años, y cuando hablas de ella todos la imaginamos igual. Pero de repente parece que rejuveneció, como si la hubieran cambiado por otra.
+Beto (V.O):
+La película La Sustancia, 5 veces nominada a los Golden Globe, no solo nos muestra una historia fuertísima sobre un tratamiento que a más de uno le voló la cabeza, sino que también refleja cómo la presión por mantenerse en el foco lleva a someter el cuerpo a procesos dolorosos y extremos.
+Aunque en este caso se trata de mantener la juventud, también es una metáfora de cómo los estándares de belleza han influido en la industria del entretenimiento.
+Además, la película logró conectar con el público amante del cine gore y de terror gracias a elementos que recuerdan a clásicos como El Resplandor, Psicosis, Carretera perdida e incluso 2001: odisea del espacio. Todo esto gracias a las escenas, ángulos, iluminación y escenarios específicos.
+Brisa:
+Bueno, pero además de lo de los famosos, ¿ya vieron lo del hombre que está haciendo un experimento con sangre?
+Sofia:
+Creo que sí, al que incluso le pusieron vampiro ¿no?, también vi que las Kardashian fueron de las primeras en unirse al movimiento, como siempre.
+Daniela:
+¡Si!, justo lo que me pareció más impactante fue su movimiento “don’t die” y que busca llegar a vivir más de 200 años.
+Sofia (tono de burla):
+Bueno, pues empezaré a ahorrar.
+Brisa:
+Jajaja, si. Creo que se llama Bryan Johnson y pues si, todo es muy impactante, porque este tratamiento no solo lo utiliza él, también lo está aplicando con su padre.
+Daniela:
+Pues está bien llevar una vida saludable, e intentar tener la mejor calidad de vida posible. Pero eso ya son extremos.
+Sofia:
+Exacto, eso ya es enfermo, ¿cuánta gente estará obsesionada con ser eternamente joven?
+Beto (V.O):
+En ocasiones los cánones de belleza rebasan géneros. Y es que poner solo un hashtag amigable en tu publicación de Instagram, no precisamente habla de que pienses así. 
+De hecho en los últimos años las denuncias de mujeres cansadas de seguir el molde estético que se les ha puesto para conseguir un papel ha crecido enormemente. 
+Voz que interrumpe:
+Pues si es triste todo eso, no es justo que una carrera prometedora quede en decisión de que tan bonita te ves.
+Pero yo pienso que exageras mucho, y eso solo pasa en las pantallas, sería difícil pensar en que alguien de verdad quisiera someterse a algo tan doloroso si no quiere estar en los medios.
+Brisa:
+Espero que no mucha, porque sino la gente empezará a tener hijos solo para hacerse transfusiones de sangre.
+Daniela:
+Justo, o espero encuentren la forma de hacerlo sin esa parte, o al menos que continúen con los tratamientos tipo el botox, la vida equilibrada y así. 
+Sofia:
+Ojalá que así sea. Porque la verdad si da miedo ver hasta donde están llegando. Pero bueno chicas, me tengo que ir, espero volver a verlas pronto.
+Brisa y Daniela juntas:
+Adiós, Sofia.
+Beto (V.O):
+Habiendo dicho todo esto llegamos al final del podcast de hoy, no sin antes agradecerles el haber puesto play, nos despedimos, yo soy Beto y espero que nos escuchemos en el próximo episodio, recuerden no dejar de  escuchar… Versátil.
+Beto (con voz más fuerte): 
+¡Corte!
+Sonido: Se escucha campana y personas hablando (5 segundos).
+Beto (tono normal, con alegría):
+Muy bien, chicas, todo quedó perfecto. Pero, ¿Dónde está Sofia?
+Brisa:
+Se fue en cuanto terminó su parte.
+Daniela: 
+Si, dijo que tenía prisa.
+Beto: 
+¿Y por qué estaba tan apurada?
+Daniela (al mismo tiempo que voz 3):
+Tenía que ir al doctor.
+Brisa (al mismo tiempo que voz 1):
+Se iba a ir de viaje.
+Brisa:
+Pues me dijo que se iría de viaje toda esta semana.
+Daniela:
+A mi me dijo que iría al doctor, pero qué raro, últimamente va muy seguido.
+Beto: 
+Bueno, ojalá todo esté bien.
+Cortinilla 
+
+    </pre>
+  </div>
+</div>
+
+<script src="general.js"></script>
+</body>
+</html>
