@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verzátil - El Monstruo de Toluca</title>
+  <link rel="stylesheet" href="general.css" />
+</head>
+<body>
+
+<!-- === TARJETA DEL PODCAST === -->
+<div class="podcast-card">
+  <div class="podcast-image">
+    <img src="imagen1/versatil.png" alt="Podcast">
+  </div>
+
+  <div class="podcast-info">
+    <h2>Verzátil</h2>
+    <h1>Episodio 03. El Monstruo de Toluca</h1>
+
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress-bar" id="progressBarContainer">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time" id="timeDisplay">00:00 / 08:38</div>
+
+      <div class="volume-container">
+        <button class="volume-btn" id="volumeBtn">
+          <img id="volumeIcon" src="iconos/alto-volumen.png" alt="Volumen" width="22">
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="audiotemp1/ElmonstruodeToluca.m4a" type="audio/mp4">
+  </audio>
+</div>
+
+<!-- === PIE DE IMAGEN === -->
+<div class="podcast-footer">
+  <span>Duración: 08:38</span>
+  <span>Escrito por: Karla, Bobs y Chems. </span>
+  <span>Visita el episodio <a href="https://youtu.be/r9PMZtrzETo?si=nSvD-_d7p_581VUu" target="_blank" rel="noopener noreferrer">aquí</a></span>
+</div>
+
+<!-- === PESTAÑAS === -->
+<div class="tab-container">
+  <div class="tabs">
+    <div class="tab active" data-tab="sinopsis">Sinopsis</div>
+    <div class="tab" data-tab="guion">Guion</div>
+  </div>
+
+  <div class="tab-content active" id="sinopsis">
+    <p>En este episodio de Versátil, el equipo se adentra en uno de los casos criminales más perturbadores del Estado de México: el de Óscar García Guzmán, conocido como El Monstruo de Toluca. A través de una narración que mezcla análisis, testimonios y recreaciones sonoras, el pódcast reconstruye la historia de un joven que llevó una vida aparentemente normal mientras cometía una serie de asesinatos. Más allá del recuento de los crímenes, el episodio reflexiona sobre la violencia, la frialdad humana, el papel de las redes sociales y la negligencia institucional, revelando cómo el horror puede ocultarse a plena vista.
+    </p>
+  </div>
+
+  <div class="tab-content guion" id="guion">
+    <pre class="guion">
+El Dahmer de toluca: Un asesino serial.
+
+
+
+
+ 
+Versátil
+
+
+
+
+
+
+ 
+Formato podcast 
+
+
+
+
+
+
+
+
+Escrito por: 
+
+
+Karla
+
+
+Bobs
+
+
+Chems
+
+
+
+
+
+
+Producido por: Diego Valdez
+
+
+
+
+
+
+Versión. 2.
+
+
+
+
+
+
+
+
+Última versión: 18 de diciembre de 2024.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ABRE CON: (Sonido de fondo suspenso,  5 segundos.)
+
+
+Bob
+(v.o)
+(Presentador)
+Hola buenos días, tardes o noches. Mi nombre es Bob y me encuentro con Leo, Kar y Chems, listos para llevarlos en un recorrido que promete inquietarlos, intrigarlos y sobre todo, hacerlos reflexionar sobre la sociedad que nos rodea.
+En este episodio titulado “El Dahmer de toluca: Un asesino serial.”,una historia que nos sumerge en las capas más profundas de lo siniestro, lo incomprensible y lo humano. Este no es solo un relato de crímenes; es un viaje a las sombras que se esconden en nuestra sociedad.
+
+(misteriosa) 
+
+
+Sonido ambiente:3 segundos de piano
+
+Leo
+(V.O)
+(Narrador)
+
+Hoy exploramos el caso de Óscar García Guzmán, conocido como “El Monstruo de Toluca” Este hombre, estudiante de psicología, utilizó su vida aparentemente normal para ocultar sus terribles crímenes. Su historia comienza a los 16 años, cuando asesinó a su propio padre. Pero eso fue solo el inicio de su rastro de muerte y dolor. En 2015, Óscar secuestró y asesinó a Jessica Jaramillo, una joven de 23 años. Jessica desapareció después de enviar un mensaje extraño por WhatsApp. 
+Nadie volvió a verla..
+
+Sonido ambiente:3 segundos de lamentos mujer e impacto.
+
+
+Bob
+(Conarrador)
+
+
+Lo más impactante de este caso es que una de las víctimas, Jessica, era compañera de universidad. Imaginen convivir con una persona así sin saber de lo que es capaz o lo que trae en la mente.
+
+
+
+
+
+
+     Chems
+(Chisme)
+¡Y lo más fuerte! Jessica era de Otzolotepec... mi municipio! Imagínense, eso pasó tan cerca y nunca nos dijeron nada. Incluso sus papás sospechaban que algo le podía pasar. Se quedaron afuera, ¡quizá hasta presenciaron el asesinato! Pero las autoridades no movieron un dedo
+
+
+Bob
+(Serio)
+Es frustrante. Jessica estaba en peligro, y nadie la protegió. Existían denuncias sobre este caso. Lo más perturbador es lo que pasó después,Óscar la siguió hasta su casa y se la llevó sin dejar rastros, ahí empezó más a fondo la búsqueda de las 24 hrs.
+
+
+Karla
+(Burlona)
+Sí, su papá ya la estaba esperando en su casa. Jaja, pero ni siquiera eso fue suficiente para llevarse a Jessica. Óscar ya tenía todo planeado. Seguirla hasta su casa, llegar con un hacha y matar a su padre, él sabía lo que hacía.
+Igual siempre pasa lo mismo. ¿Para qué sirve denunciar si nadie hace nada? O su búsqueda de las 24 hrs.
+
+
+Chems
+(Confundido)
+Ehh.. nadie mencionó un hacha Karla pero ¡si!, me dio mucho escalofrío cuando me enteré de ese suceso, imagínate de la nada que te suelten un cocaso solo por proteger a tu hija.
+
+
+
+
+
+
+Sonido ambiente: Efecto sonido impacto
+
+
+            
+         Leo
+             (V.O.)
+               (Narrador)
+Pero Jessica no fue su única víctima, Óscar asesinó a otras cinco mujeres. Como el caso de Adriana González, víctima también de él. Lo más perturbador es que usaba Facebook para escribir sobre sus crímenes, dejando pistas e incluso consejos para atraparlo.
+
+Sonido ambiente: Efecto de impacto.
+
+
+
+
+Bob
+(Conarrador)
+
+
+Es increíble cómo alguien así puede vivir en medio de la sociedad y cometer estos actos con tanta frialdad.Y como le daba uso a su Facebook, no es todo, incluso dejó pistas claras, Por ejemplo, la nota donde indicaba dónde estaban enterradas cada una de sus víctimas.
+
+
+Karla
+(Impactada)
+¡Qué horror!Mucho cinismo, que puedo esperar de alguien cuya moralidad ya no tiene! ¿pero las autoridades no podían rastrearlo? o en que momento lo atraparon? Por que digo, existen muchas versiones.
+
+
+Leo
+(V.0)
+(Narrador)
+Óscar  asistió al Knotfest, un festival de rock que se realiza 1 vez al año, el subió fotos disfrutando del festival como si nada. Ahí fue donde las autoridades lo identificaron y comenzaron a seguirle el rastro.
+
+
+
+
+
+
+Sonido ambiente: 5 segundos de "Psychosocial" de Slipknot
+
+
+     Chems
+      (Chisme)
+Ay, lo más curioso es la forma en que lo atraparon, porque al listillo se le ocurrió ir a ese festival, entre tanta gente nadie lo reconocía, imaginate estar al lado de un asesino… 
+
+
+Karla
+(Cisañosa)
+Ah, Sí... el Knotfest. Cierto, fue donde quemaron la bateria de una banda, ¿no? Aunque, siendo sincera, ¿quién no necesita distraerse un poco después de tanta presión? Digo, no lo justifico, pero todos necesitamos despejarnos a veces.
+
+
+Chems
+(Chisme)
+
+
+Justo,  hahaha ¿Imagínate que el que empezó el desastre fue ese tipo? Pero bueno, ¿Hay más Chisme no? Una llamada con su mamá cuando fue capturado.
+
+
+Sonido ambiente: sonido patrullas 
+ 
+
+
+Leo
+(v.o) 
+(Narrador)
+Óscar García Guzmán, desde la carcel tuvo una llamada telefónica con su madre. En esa conversación, su madre le pregunta cómo está, preocupada por su bienestar, pero él, en un tono sorprendentemente tranquilo, le responde con una preocupación completamente ajena a lo que estaba pasando. 
+Bob
+(Serio)
+Lo que realmente impacta de esa llamada es que, en medio de todo lo que estaba sucediendo, lo único que le preocupaba a Óscar eran sus perros.
+
+
+Chems
+(Chisme)
+
+Cierto, recuerdo que le dijo a su madre durante la llamada: "Mamá, ¿Cómo están los perros? ¿Están bien? Cuidalos, por favor".
+¡No inventen! ¡Eso sí es estar mal de la cabeza! Preocupado por sus perros mientras las familias de las víctimas lloraban por todo lo que había hecho.
+
+Sonido ambiente: 3 segundos de silencio.
+
+
+Karla
+Y(Disimulada)
+
+Bueno... los animales siempre te ven como eres. Tal vez los perros eran lo único que Óscar sentía que lo aceptaba sin juzgar. Esto pone en evidencia la frialdad y la psicopatía que caracterizan a este tipo de criminales.
+
+Sonido ambiente: 4 segundos alarma contra incendios.
+
+
+
+
+
+Chems
+(Sospechando)
+
+Oye, Karla, ¿por qué cada vez defiendes más a este tipo? ¿No será que sabes más de lo que dices?.
+Ahh, karla, anda vibrando tu cel, hacemos una pequeña pausa.
+
+Sonido ambiente: 3 segundos de silencio.
+
+Sonido ambiente: Llamada telefónica como distorsionada (Karla era una impostora que le daba información a Oscar)
+
+Karla
+(Misteriosa)
+
+Bueno, ¿Oscar? ya tengo información sobre lo que hablan afuera de ti, no sospecharon nada, me sentía presionada ya de tanto que chems me cuestionaba,  voy para allá.. 
+
+Sonido ambiente: Sonido de golpe y entra música para despedida.
+
+Leo
+(V.O.)
+Esto es uno de los casos más atroces y perturbadores ocurridos en el estado de México, que nos refleja la naturaleza más oscura de la mente y a su vez refleja la incompetencia de las autoridades, y al mismo tiempo es un llamado a la sociedad e instituciones a poner atención en aquellas actitudes que pueden denotar enfermedades mentales graves.
+
+Bob
+(Despedida)
+Bien, por ahora se nos ha acabado el tiempo, gracias por acompañarnos en este episodio de Versátil, el espacio donde las historias más oscuras encuentran su lugar bajo la luz. Este caso nos hace cuestionar muchas cosas sobre cómo se maneja la violencia en nuestro país. 
+
+
+
+Karla
+Hasta pronto, y recuerden: siempre hay algo más allá de la superficie.
+
+
+
+
+
+Pop A: 
+CORTINILLAS INSTITUCIONALES
+
+
+TERMINA EPISODIO 
+
+
+    </pre>
+  </div>
+</div>
+
+<script src="general.js"></script>
+</body>
+</html>
