@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verzátil - Diálogos Socráticos</title>
+  <link rel="stylesheet" href="general.css" />
+</head>
+<body>
+
+<!-- === TARJETA DEL PODCAST === -->
+<div class="podcast-card">
+  <div class="podcast-image">
+    <img src="imagen1/versatil.png" alt="Podcast">
+  </div>
+
+  <div class="podcast-info">
+    <h2>Verzátil</h2>
+    <h1>Episodio 04. Diálogos Socráticos</h1>
+
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress-bar" id="progressBarContainer">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time" id="timeDisplay">00:00 / 07:09</div>
+
+      <div class="volume-container">
+        <button class="volume-btn" id="volumeBtn">
+          <img id="volumeIcon" src="iconos/alto-volumen.png" alt="Volumen" width="22">
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="audiotemp1/Diálogossocráticos.m4a" type="audio/mp4">
+  </audio>
+</div>
+
+<!-- === PIE DE IMAGEN === -->
+<div class="podcast-footer">
+  <span>Duración: 07:09</span>
+  <span>Escrito por: Eder Eduardo Martinez Ruiz. </span>
+  <span>Visita el episodio <a href="https://www.youtube.com/watch?v=ECmbffRobr0" target="_blank" rel="noopener noreferrer">aquí</a></span>
+</div>
+
+<!-- === PESTAÑAS === -->
+<div class="tab-container">
+  <div class="tabs">
+    <div class="tab active" data-tab="sinopsis">Sinopsis</div>
+    <div class="tab" data-tab="guion">Guion</div>
+  </div>
+
+  <div class="tab-content active" id="sinopsis">
+    <p>En este episodio de Versátil, el pódcast invita a reflexionar sobre el poder del diálogo como herramienta de autoconocimiento y aprendizaje, retomando el pensamiento de Sócrates y su método filosófico basado en la pregunta. A través de una narración íntima y contemplativa, el episodio explora cómo reconocer la propia ignorancia, cuestionar lo que creemos saber y conversar con apertura puede transformar nuestra manera de entender el mundo y a los demás. Más que una lección de filosofía, este capítulo propone el diálogo como un acto humano esencial para acercarnos a la verdad.
+    </p>
+  </div>
+
+  <div class="tab-content guion" id="guion">
+    <pre class="guion">
+Diálogos
+ 
+Departamento de Estudios Culturales
+Universidad Autónoma Metropolitana, Unidad Lerma
+ 
+Formato podcast 
+Escrito por: Eder Eduardo Martinez Ruiz 
+Producido por: Diego Valdez
+Versión. 2.
+Fecha: 17 de Septiembre de 2024
+
+
+ 
+ABRE CON: Se escucha un fragmento de “La danza macabra - IA” (segundo 25 al 35)
+Eder
+(v.o.)
+¿Puede  una simple conversación transformarse en una herramienta para  descubrirse y autoconocerse? ¿Qué sucede cuando el diálogo se convierte en la mejor forma para aprender? 
+
+¿Qué tal?, yo soy Edu, y esto es… 
+
+(misteriosa) 
+¡Diálogos! 
+
+Viajemos al pasado, en el 399 a.C, para encontrar algunas respuestas en consideración de una de las mentes más influyentes de la filosofía…
+(Énfasis)
+ Sócrates
+Pero no para hablar de su vida, sino más bien, del arte de conversar.
+
+Socrates no solo fue, es y será un pilar de la filosofía. Este  emblemático preguntón que detestaba escribir. 
+Prefería siempre el pensamiento en praxis. 
+Gracias a su sabiduría Platón nos lo presenta como la persona más sabia del mundo, pero también, la persona que nos ayudará a buscar la verdad. Se dice que
+(Reflexiva)
+ “La verdad no es algo a lo que se llega, si no es algo a lo que se acerca”.
+
+
+Sonido ambiente:3 segundos de silencio. 
+
+
+Eder
+(V.O)
+"Yo solo sé que no sé nada" 
+Sonido ambiente: Efecto. 
+Eder 
+(V.O.)
+Conocerse a sí mismo implica también conocer hasta de lo que no es. 
+(Reflexiva)
+“Más sabia es la que sabe lo que no sabe”.
+ Esto es muy irónico. ¿Cuántas veces hemos cuestionado nuestro propio conocimiento?, te has preguntado  ¿por qué crees que sabes?
+Saber de lo que no sabes es una llamada a la autoexploración. Porque “¿cómo podemos aprender si ya creemos que lo sabemos todo?"
+
+Pero entonces, ¿qué alternativa tenemos?
+
+Sonido ambiente: 3 segundos de silencio.
+Eder 
+(v.o) 
+“El Arte de dialogar”.
+Sonido ambiente: personas conversando, en seguida 3 segundos de silencio. 
+Eder 
+(V.O.) 
+Las palabras cuidadosas siembran ideas, que con el tiempo y cuidado, 
+florecen en comprensión. 
+
+Sonido ambiente: 3 segundos de silencio.
+
+
+Eder
+(V.O.)
+Te has preguntado ¿cuál es la mejor arma de un sabio?
+
+
+Sonido ambiente: 3 segundos de silencio.
+
+
+Eder
+(V.O.)
+El diálogo.
+ 
+Sonido ambiente: 3 segundos de silencio.
+Eder
+(V.O.)
+El diálogo es para un sabio lo que una espada es para un guerrero. El guerrero lucha con fuerza física. Pero el sabio, con el poder del entendimiento, usa el diálogo como su arma para desarmar conflictos y forjar nuevas ideas. Por medio de las preguntas y respuestas para llegar al conocimiento, el diálogo  se convierte en la mejor herramienta para llegar a la verdad. Pero no solo se trata de transmitir información. La labor de un verdadero sabio se encuentra en la forma en la que estimula el pensamiento crítico y la reflexión filosófica. ¿Quién diría que este método resultaría el principio del fin para Socrates?
+
+En este sentido te presento a mis 5 felices comadres: ¿Qué? ¿Por qué? ¿Para qué? ¿Cómo? ¿Cuándo y dónde?
+ Cuando desees un diálogo enriquecedor, procura ser como mis comadres. 
+Y ¿cómo es eso?
+Sé un  buen o buena preguntona. No impongas tus ideas. Mejor formula preguntas, aunque te des a entender que no sabes nada, pues recuerda, “El conocimiento siempre viene de la duda”. 
+
+Sonido ambiente: 3 segundos de silencio.
+
+Eder 
+(V.O.)
+Llevar a cabo una buena conversación  nos convierte en buenos filósofos. Así como Socrates, debemos aprender a reconocer nuestra propia ignorancia. Su famosa frase
+(Reflexiva)
+ "solo sé que no sé nada" 
+no era una simple muestra de humildad, sino una llamada a tener hambre del saber. 
+
+Sonido ambiente: 3 segundos de silencio.
+Sonido ambiente: Reflexivo.
+
+Eder 
+(V.O.)
+Sócrates fue llevado a juicio por la ciudad de Atenas. Fue acusado de pervertir a sus jóvenes y alejarlos de los dioses. Se le dio a elegir entre renegar de sus ideas o ser condenado al suicidio por envenanamiento. 
+(Misterioso)
+Eligió la muerte.
+
+Sonido ambiente: 3 segundos de silencio.
+Eder 
+(V.O.)
+Su muerte nos enseña que la verdadera conversación no es aquella en la que todos están de acuerdo, sino aquella en la que se desafían mutuamente a pensar mejor. A ir más allá de lo común.
+
+Así que la próxima vez que te encuentres en una conversación, en vez de buscar tener la última palabra, intenta algo diferente. 
+
+Sonido ambiente: 3 segundos de silencio.
+Eder 
+(V.O.)
+Pregunta, escucha, reflexiona. Y recuerda: el diálogo es una herramienta poderosa para conocernos a nosotros mismos y a los demás. 
+
+Antes de despedirme, me gustaría que te llevaras no solo la experiencia de escuchar este podcast, sino también de cambiar tu mundo con  “El poder de conversar”. 
+
+Muchos de los problemas que vivimos, y hemos dejado pasar, se encuentran en la falta de habilidad filosófica de conversar. Conversar tiene que ver más con el nosotros que con el yo. 
+
+Detrás de una conversación verdadera no se encuentra un perdedor o un ganador. Detrás de una conversación verdadera hay personas que quieren y necesitan acercarse a la verdad, con la ayuda de los demás. 
+(Reflexivo)
+“Nos jugamos la vida en las conversaciones que tenemos y también en las que no.”
+
+Sonido ambiente: 3 segundos de silencio.
+Sonido ambiente: Reflexivo.
+
+Y tú, te has preguntado, ¿Cómo son tus conversaciones?
+
+Esto ha sido un episodio más de  Versátil: un capítulo llamado  Sócrates y la filosofía del diálogo,. Nos vemos pronto.
+
+Sonido ambiente: Suena capitulo de Malcolm el de enmedio, voz de Reese. 
+
+“En un mundo de mentiras, la verdad siempre será tu mejor arma” 
+
+
+
+
+Pop A: 
+CORTINILLAS INSTITUCIONALES
+
+
+TERMINA EPISODIO 
+
+    </pre>
+  </div>
+</div>
+
+<script src="general.js"></script>
+</body>
+</html>
