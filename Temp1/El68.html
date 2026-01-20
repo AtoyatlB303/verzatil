@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verzátil - El 68: una revolución total</title>
+  <link rel="stylesheet" href="general.css" />
+</head>
+<body>
+
+<!-- === TARJETA DEL PODCAST === -->
+<div class="podcast-card">
+  <div class="podcast-image">
+    <img src="imagen1/versatil.png" alt="Podcast">
+  </div>
+
+  <div class="podcast-info">
+    <h2>Verzátil</h2>
+    <h1>Episodio 09. El 68: una revolución total</h1>
+
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress-bar" id="progressBarContainer">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time" id="timeDisplay">00:00 / 06:53</div>
+
+      <div class="volume-container">
+        <button class="volume-btn" id="volumeBtn">
+          <img id="volumeIcon" src="iconos/alto-volumen.png" alt="Volumen" width="22">
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="audiotemp1/El68.m4a" type="audio/mp4">
+  </audio>
+</div>
+
+<!-- === PIE DE IMAGEN === -->
+<div class="podcast-footer">
+  <span>Duración: 06:53</span>
+  <span>Escrito por: Brisa Quevedo, Jesús Cuadros, Alejandro Martínez. </span>
+  <span>Visita el episodio <a href="https://www.youtube.com/watch?v=e4Eder5aBEA" target="_blank" rel="noopener noreferrer">aquí</a></span>
+</div>
+
+<!-- === PESTAÑAS === -->
+<div class="tab-container">
+  <div class="tabs">
+    <div class="tab active" data-tab="sinopsis">Sinopsis</div>
+    <div class="tab" data-tab="guion">Guion</div>
+  </div>
+
+  <div class="tab-content active" id="sinopsis">
+    <p>En este episodio de Versátil, se recuerda el 2 de octubre de 1968, una de las fechas más dolorosas y significativas de la historia reciente de México. A partir del origen del movimiento estudiantil —detonado por un conflicto aparentemente trivial—, el relato reconstruye el clima político, social y cultural del país en vísperas de los Juegos Olímpicos, marcados por la tensión entre la imagen de progreso que el gobierno quería proyectar y la creciente inconformidad estudiantil. El episodio aborda la represión en la Plaza de las Tres Culturas como un acto de violencia de Estado que dejó una huella imborrable en la memoria colectiva, contrastando los discursos oficiales con las múltiples versiones de lo ocurrido. A través de referencias históricas, culturales y artísticas, como la película Rojo amanecer, el programa reflexiona sobre la importancia de la memoria histórica, el papel del arte como resistencia y la necesidad de seguir recordando para no repetir los errores del pasado.
+    </p>
+  </div>
+
+  <div class="tab-content guion" id="guion">
+    <pre class="guion">
+ 
+
+[Intro- 5 segundos]
+[Música de fondo]
+Narrador:
+
+"La memoria es nuestra mejor arma contra la opresión". ¡Bienvenidos a "Versátil"! Hoy vamos a recordar el 2 de octubre de 1968.
+Ese día fue crucial en la lucha estudiantil por los derechos y libertades de los estudiantes mexicanos. ¿Sabían que todo comenzó con un altercado en un partido de fútbol entre la UNAM y el IPN?
+¡Increíble! Parece que el fútbol no solo enciende pasiones, sino también revoluciones.
+[Sonido de partido de fútbol y gritos de aficionados]
+La tensión creció y la policía actuó rápido, arrestando a estudiantes.
+Esto desencadenó protestas y represión. Quién diría que todo empezó con un simple partido...
+[Sonido de sirenas y alboroto]
+Cabe destacar que 1968 fue un año de grandes expectativas para México. El país se preparaba para ser sede de los Juegos Olímpicos.
+Todo el mundo tenía los ojos puestos en México. El gobierno quería mostrar una imagen de estabilidad y progreso.
+Sin embargo, había un ambiente de tensión y protesta estudiantil. Parece que el gobierno quería ganar el oro en "represión".
+
+Los estudiantes exigían reformas educativas, políticas y sociales. Querían un México más justo y equitativo.
+2
+Este movimiento estudiantil, conocido como el Movimiento del 68, fue esencial en la lucha por los derechos y las libertades en México.
+Sin embargo, el gobierno, encabezado por Gustavo Díaz Ordaz, respondió con opresión y violencia. Nada como un poco de represión para demostrar progreso.
+3
+El 2 de octubre de 1968, miles de estudiantes se reunieron en la Plaza de las Tres Culturas en Tlatelolco, Ciudad de México, para una manifestación pacífica.
+[Sonido de marcha y cánticos de protesta]
+Pero la respuesta del gobierno fue brutal. El ejército y la policía reprimieron la protesta violentamente.
+1
+
+Esta fecha quedó marcada con sangre y muerte. Parece que el gobierno confundió "manifestación pacífica" con una "competencia de tiro al blanco".
+[Sonido de disparos y gritos]
+Los datos oficiales hablan de 30-40 muertos, pero muchos creen que fueron cientos.
+Este evento contrastaba fuertemente con el espíritu de paz y unidad que los Juegos Olímpicos representaban. Nada como un poco de hipocresía olímpica para aderezar la historia.
+Para muchos, este evento es un símbolo de la lucha por la libertad y la justicia en México. La memoria de estos hechos nos sigue recordando la importancia de seguir luchando por los derechos humanos.2.
+A pesar de la tragedia, los Juegos Olímpicos continuaron. México fue testigo de momentos históricos.
+El saludo del poder negro de los atletas estadounidenses Tommie Smith y John Carlos fue un acto de protesta contra la discriminación racial. Al menos alguien aprovechó el escenario para algo positivo.
+Una de las representaciones más impactantes de esta tragedia es la película "Rojo amanecer", dirigida por Jorge Fons.
+Esta película sigue la historia de una familia afectada por la represión y la violencia del gobierno. Nos muestra el impacto personal y social de estos eventos.
+"Rojo amanecer" nos lleva a revivir ese trágico día y nos invita a reflexionar sobre la importancia de la memoria histórica.
+El arte puede ser una poderosa herramienta para mantener vivo el recuerdo de nuestras luchas y resistencias.
+[Sonido de película antigua rodando]
+"Rojo amanecer" es un ejemplo de cómo el arte y la cultura nos ayudan a conocer, recordar y reflexionar sobre nuestra historia. Esta película ha sido un faro de luz para muchas generaciones que buscan entender y aprender del pasado.
+
+Quien no conoce su historia está condenado a repetirla. Y si la conoce, probablemente hará una película sobre ella.
+El movimiento estudiantil del 68 fue un grito de libertad y justicia. Es crucial que sigamos recordando estos eventos para no repetir los mismos errores del pasado.
+La lucha estudiantil del 68 dejó una huella imborrable en la historia de México. Su legado sigue inspirando a las nuevas generaciones a luchar por un mundo más justo y equitativo.
+[Sonido de marcha de protesta disminuyendo]
+Gracias por acompañarnos. No olviden escuchar los demás episodios de "Versátil". ¡Hasta la próxima!
+[Música de cierre] (5 segundos)
+Narrador:
+Bueno, ¿y ahora qué? ¿Nos echamos un partido?
+[Sonido de risas]
+¡Claro, vamos!
+(Silencio 5 segundos)
+
+
+
+    </pre>
+  </div>
+</div>
+
+<script src="general.js"></script>
+</body>
+</html>

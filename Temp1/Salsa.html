@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verzátil - La Música Salsa</title>
+  <link rel="stylesheet" href="general.css" />
+</head>
+<body>
+
+<!-- === TARJETA DEL PODCAST === -->
+<div class="podcast-card">
+  <div class="podcast-image">
+    <img src="imagen1/versatil.png" alt="Podcast">
+  </div>
+
+  <div class="podcast-info">
+    <h2>Verzátil</h2>
+    <h1>Episodio 07. La Música Salsa</h1>
+
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress-bar" id="progressBarContainer">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time" id="timeDisplay">00:00 / 06:44</div>
+
+      <div class="volume-container">
+        <button class="volume-btn" id="volumeBtn">
+          <img id="volumeIcon" src="iconos/alto-volumen.png" alt="Volumen" width="22">
+        </button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="audiotemp1/Lasalsa.m4a" type="audio/mp4">
+  </audio>
+</div>
+
+<!-- === PIE DE IMAGEN === -->
+<div class="podcast-footer">
+  <span>Duración: 06:44</span>
+  <span>Escrito por: Luna, Yuri, Sher. </span>
+  <span>Visita el episodio <a href="https://www.youtube.com/watch?v=-M4gscvLWTQ" target="_blank" rel="noopener noreferrer">aquí</a></span>
+</div>
+
+<!-- === PESTAÑAS === -->
+<div class="tab-container">
+  <div class="tabs">
+    <div class="tab active" data-tab="sinopsis">Sinopsis</div>
+    <div class="tab" data-tab="guion">Guion</div>
+  </div>
+
+  <div class="tab-content active" id="sinopsis">
+    <p>En este episodio de Versátil, Luna, Yuri y Sher nos invitan a recorrer la historia y el espíritu de la música salsa, un género que va más allá del ritmo para convertirse en identidad, memoria y forma de vida. Desde sus orígenes afrocaribeños y su llegada a los barrios latinos de Nueva York, hasta las experiencias personales que la conectan con el amor, la familia, el baile y la sanación emocional, el episodio muestra cómo la salsa atraviesa generaciones y acompaña momentos clave de la vida cotidiana. Una celebración sonora del ritmo que une cuerpos, historias y corazones.
+  </div>
+
+  <div class="tab-content guion" id="guion">
+    <pre class="guion">
+Ritmo y sabor
+Una oda a la música salsa
+Guion
+
+Escrito por: Luna, Yuri, Sher.
+Formato: Pódcast
+Versión 3
+
+Fecha: 18 de septiembre de 2024
+Contacto: UAM Lerma
+
+ACTO 1
+Se abre con:
+Sonido ambiente: 5 segundos de música salsa de una clase grupal. Escuchamos voces y tacones.
+Luna
+Buenos días, tardes o noches, nosotras somos Luna, Yuri y Sher. En esta ocasión queremos platicarles sobre un género que ha marcado generaciones enteras y sigue siendo una fuente de inspiración y alegría en todo el mundo: la música salsa.
+La salsa es más que música. Es una cultura, una representación, una forma de expresión que ha influido en nuestra vida cotidiana, nuestras emociones y hasta nuestra forma de entender el mundo. Pero… ¿Cómo comenzó?
+En este episodio, no solo hablaremos de música, hablaremos de vida, de pasiones, de momentos que solo la salsa puede capturar en cada uno de nosotros. Vamos a revivir los recuerdos, contar las historias y a sentir cada nota que nos mueve.
+Sonido ambiente: ascenso y descenso de timbales.
+Luna
+La salsa surge como una manifestación musical que mezcla distintos instrumentos y estilos afrocaribeños. En la década de 1960 llega a los barrios bajos de Nueva York a través de los migrantes latinoamericanos que, tras hacer una fusión de ritmos, dieron a conocer este peculiar género musical.
+Debemos destacar que la salsa es una forma de resistencia, de unión cultural y de celebración, llevando la identidad y tradiciones de distintas comunidades latinas tanto en la música como en el baile que tanto la representa.
+V.O.
+Sher
+Cierra los ojos... y escucha. No es solo un ritmo, es el latido de un corazón. Es el sonido de una esquina en el barrio, el eco de las historias de amor y desamor que todos hemos vivido.
+Sonido ambiente: ascenso y descenso de congas y timbales.
+
+Yuri
+Pero, te has preguntado, ¿cómo la salsa influye en nuestra vida cotidiana? Quisiera ahora contarte sobre nuestras experiencias y lo que nos conecta con este género musical.
+V.O.
+Sher
+(alegre)
+Y así, con un pie en el suelo y el corazón en las estrellas, comenzamos con las historias.
+Sonido ambiente: ascenso y descenso de maracas y pandereta.
+Sher
+Mi historia con la salsa empezó cuando tenía 8 años. La empecé a escuchar por mi papá, quien le dedicaba muchas canciones de salsa romántica a mi mamá. Sin embargo, después de su separación, la dejé de escuchar por años… pero luego llegó un muchacho que me gustó y la volví a escuchar porque a él le encantaba la salsa.
+Fue algo raro volver a escucharla, porque no solo fue oírla, sino comenzar a sentirla; claro, me llamó mucho más la idea de bailarla… y desde entonces he tenido experiencias muy lindas con mi maestra de baile, que fue mi mamá. La salsa nos ha unido un poco más.
+V.O.
+(suspiro, risa nostálgica)
+Al mal tiempo, buena salsa.
+Yuri
+Mi historia comienza cuando un día navegando en redes sociales, escuche una canción de este género. La cual desde el primer momento que la escuché me contagió esa buena vibra y fue así como fui indagando más y más sobre esta música y sus canciones. En muchas de ellas se describen momentos que he pasado y muchas otras su letra o composición te invitan a seguir descubriéndolas.
+Con el tiempo, empecé a ir a bailes de salsa con mi papá, al cual le encantaba bailar. Al principio no me gustaba la idea de intentar bailarla, por miedo o incluso por pena.
+Poco a poco fui perdiendo la pena y el miedo que tenía al principio, para dejarme llevarme por la música. Un tiempo después tuve algunos problemas, por lo paso lo inesperado, caí en depresión y por lo que bailar salsa me ayudaba a olvidarme de lo que había pasado.
+Sonido ambiente: largo suspiro.
+Luna
+De niña recuerdo ver a mi hermana y a mi mamá bailando salsa en las fiestas familiares con una gran sonrisa en la cara, disfrutando y divirtiéndose. Para mí, eso es la salsa: felicidad, disfrute, expresión. Después, empecé a tomar clases de baile y se convirtió en mi refugio. Me di cuenta de que era libre de expresarme a través de mi cuerpo, que podía conocerme y aceptarme a mí misma a través de su música.
+La salsa me ha permitido conocer un mundo que no sabía que existía. Sin duda me ha dado experiencias hermosas donde he podido compartir con personas que admiro, no solo por su forma de expresar el baile, también por su manera de compartir lo que saben. 
+Sonido ambiente: ascenso y descenso de música festiva.
+Luna, Yuri, Sher
+¿Y la salsa cómo influye en tu historia?
+Luna
+Gracias por acompañarnos y esperamos compartir contigo en un próximo episodio.
+Nos escuchamos pronto.
+
+Pop a:
+Cortinillas institucionales
+
+Fin del episodio
+
+
+    </pre>
+  </div>
+</div>
+
+<script src="general.js"></script>
+</body>
+</html>
